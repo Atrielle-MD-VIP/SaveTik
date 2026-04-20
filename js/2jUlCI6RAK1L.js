@@ -98,7 +98,7 @@ async function downloadVideo() {
 
         if (res.status && res.data) {
             const cleanNick = (res.data.author_nickname || 'user').replace(/\s+/g, '');
-            const fileName = `WsynapTik_@${cleanNick}_${res.data.itemId}.mp4`;
+            const fileName = `SaveTik_@${cleanNick}_${res.data.itemId}.mp4`;
 
             contentDiv.innerHTML = `
                 <div class="animate-fade-in space-y-6">
