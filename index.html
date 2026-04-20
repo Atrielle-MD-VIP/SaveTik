@@ -1,0 +1,160 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="Yfok9P8pWwu9o6pd_kB1G0U9H-5KbdZ13e79sZA5nHQ">
+    <link rel="icon" type="image/png" href="images/GaLH3hYupM6m.png">
+    <link rel="apple-touch-icon" href="images/GaLH3hYupM6m.png">
+    <meta name="description" content="SaveTik - Download video TikTok tanpa watermark dan Instagram Reels gratis dengan kualitas HD. Cepat, aman, dan tanpa login.">
+    <meta name="keywords" content="SaveTik, SaveTikDown, download video tiktok, tiktok no watermark, tiktok no wm, download video instagram, download reels instagram">
+    <meta name="author" content="Nabil Assihidiqi">
+    <title>SaveTik - Download Video TikTok & Instagram No Watermark</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/6kVIyJO302hq.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/htsXIKuQ221L.css">
+    
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif;
+            background-color: #0f0f0f; 
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+        .bg-grid {
+            background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+            z-index: -1;
+            filter: blur(50px);
+            transition: background 0.5s ease;
+        }
+        .glass { 
+            background: rgba(20, 20, 20, 0.7); 
+            backdrop-filter: blur(20px); 
+            border: 1px solid rgba(255,255,255,0.08); 
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        .btn-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-gradient-ig {
+            background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+        }
+        .btn-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.5);
+        }
+        .social-icons a {
+            color: #4b5563;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #3b82f6;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body class="bg-grid flex items-center justify-center min-h-screen p-4 sm:p-8">
+
+    <div id="mainGlow" class="glow top-10 left-10"></div>
+    <div class="glow bottom-10 right-10"></div>
+
+    <div class="max-w-2xl w-full glass p-6 sm:p-10 rounded-[2.5rem] relative overflow-hidden">
+        
+        <div class="flex p-1 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 mb-8 max-w-[320px] mx-auto relative z-20">
+            <button onclick="switchTab('tiktok')" id="tab-tiktok" class="flex-1 py-2.5 rounded-xl text-sm font-bold transition-all bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-lg">
+                <i class="fab fa-tiktok mr-2"></i>TikTok
+            </button>
+            <button onclick="switchTab('instagram')" id="tab-instagram" class="flex-1 py-2.5 rounded-xl text-sm font-bold text-gray-400 hover:text-white transition-all">
+                <i class="fab fa-instagram mr-2"></i>Instagram
+            </button>
+        </div>
+
+        <div id="inputSection" class="block animate-fade-in">
+            <header class="text-center mb-10">
+                <div class="inline-block p-3 rounded-2xl bg-white/5 mb-4 border border-white/10">
+                    <div id="headerIcon">
+                        <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"></path>
+                        </svg>
+                    </div>
+                </div>
+                <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-3">
+                    <span id="brandTitle" class="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
+                        SaveTik
+                    </span>
+                </h1>
+                <p id="brandDesc" class="text-gray-400 font-medium tracking-wide">Fast, Secure, & No Watermark</p>
+            </header>
+
+            <div class="space-y-4 relative z-10">
+                <div class="relative group">
+                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                        <i id="inputIcon" class="fab fa-tiktok h-5 w-5 text-gray-500 group-focus-within:text-blue-500 transition-colors"></i>
+                    </div>
+                    <input type="text" id="urlInput" placeholder="tempel tautan video disini" class="w-full pl-12 pr-4 py-5 rounded-2xl bg-[#161616] border border-white/10 focus:border-blue-500/50 focus:outline-none transition-all text-white placeholder-gray-600">
+                </div>
+                
+                <button onclick="handleDownload()" id="btnDownload" class="w-full btn-gradient text-white font-extrabold text-lg py-5 rounded-2xl flex items-center justify-center gap-3">
+                    <span id="btnText">Download Video</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="resultSection" class="hidden animate-fade-in">
+            <div class="flex items-center justify-between mb-6 pb-6 border-b border-white/5">
+                <button onclick="backToHome()" class="text-gray-400 hover:text-white flex items-center gap-2 transition-all group">
+                    <svg class="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                    <span class="font-medium">Kembali</span>
+                </button>
+                <div class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full">
+                    <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest">Nabil Assihidiqi</span>
+                </div>
+            </div>
+
+            <div id="loading" class="flex flex-col items-center justify-center py-20">
+                <div class="w-12 h-12 border-4 border-blue-500/20 border-t-blue-500 rounded-full animate-spin mb-4"></div>
+                <p class="text-gray-400 animate-pulse text-sm font-medium tracking-wide">Sabar Sayang...</p>
+            </div>
+            
+            <div id="content" class="hidden"></div>
+        </div>
+
+        <footer class="mt-8 pt-6 border-t border-white/5">
+            <p id="footerCopyright" class="text-center text-[10px] text-gray-600 uppercase tracking-[0.2em] mb-4">
+                © 2026 SaveTik • Downloader
+            </p>
+            
+            <div class="social-icons flex gap-6 justify-center">
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="Github">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://t.me/NabilOfficialShopp" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://tiktok.com/@" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="mailto: anakselatan34@gmail.com@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/2jUlCI6RAK1L.js"></script>
+
+
+</body></html>
